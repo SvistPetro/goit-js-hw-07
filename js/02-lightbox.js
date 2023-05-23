@@ -8,18 +8,8 @@ const galleryElements = galleryItems.map(
 );
 ulEl.insertAdjacentHTML("beforeend", galleryElements.join(""));
 
-function onClick(event) {
-  event.preventDefault();
-
-  if (!event.target.classList.contains("gallery__image")) {
-    return;
-  }
-
-  var lightbox = new SimpleLightbox(".gallery a", {
-    captionPosition: "bottom",
-    captionDelay: 250,
-    captionsData: "alt",
-  });
-}
-
-ulEl.addEventListener("click", onClick);
+var lightbox = new SimpleLightbox(".gallery a", {
+  captionPosition: "bottom",
+  captionDelay: 250,
+  captionsData: "alt",
+});
